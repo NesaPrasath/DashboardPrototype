@@ -1,11 +1,25 @@
 .App {
   text-align: center;
+  display: flex;
+  font-family: Inter;
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  /* color: white;
+  background-color: black; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root{
+  width: 100vw;
+  height: 100vh;
+  padding: 0%;
+  margin: 0%;
 }
+
+/* svg,path{
+  fill: white !important;
+} */
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,7 +27,7 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,6 +36,22 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+} */
+
+p,button{
+  margin: 0%;
+  padding: 0%;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+h3{
+  padding: 0%;
+  margin: 0%;
+}
+
+tr{
+  border: none;
 }
 
 .App-link {
@@ -35,4 +65,260 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+button{
+  cursor: pointer;
+  background-color: transparent;
+}
+
+table{
+  border-collapse: collapse;
+  border: none;
+}
+
+td,th{
+  padding: 8px 12px;
+}
+
+th{
+  font-weight: 400;
+  font-size: 14px;
+  color: #1C1C1C66;
+}
+
+input:focus {
+  outline: none;
+}
+
+.inline-ele{
+  display: inline;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+
+.sidebar-button{
+  cursor: pointer;
+  user-select: none;
+  width: 180px;
+  text-align: start;
+  display: flex;
+  padding: 4px;
+}
+
+.sidebar-button:hover{
+  background-color: var(--black-5, rgba(28, 28, 28, 0.05));
+  border-radius: 8px;
+  border-left: black solid;
+}
+
+.prof-pic{
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.prof-badge{
+  display: flex;
+  text-align: start;
+  gap: 8px;
+}
+
+.sidebarheader{
+  font-weight: 400;
+  color: #1C1C1C66;
+  text-align: start;
+  padding: 4px 0px;
+  margin: 0px !important;
+  font-size: 16px;
+}
+
+.sidebar{
+  padding: 20px 16px;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-right: #1C1C1C1A solid 1px; 
+}
+
+.sidebarframes{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebarelement{
+  padding: 4px 0px;
+}
+
+.gridrow{
+  border-bottom: #1C1C1C1A solid 1px;
+}
+
+.gridheader{
+  background-color: #F7F9FB;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.gridcontainer{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pagination{
+  display: inline-flex;
+  gap: 4px;
+}
+
+.pagination-btn{
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.pagination-btn:hover{
+  background-color: #1C1C1C1A;
+  border-radius: 6px;
+}
+
+.menubar{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 28px;
+  border-bottom: #1C1C1C1A solid 1px;
+}
+
+.menubar-frame{
+  display: flex;
+  /* justify-content: space-evenly; */
+  gap: 8px;
+}
+
+.breadcrum{
+  display: flex;
+}
+
+.breadcrum-btn{
+  color: #1C1C1C66;
+  padding: 8px 4px;
+}
+
+.maincontainer{
+  display: flex;
+  width: 100%;
+}
+
+.mainpage{
+  width: 75%;
+  animation: alternate-reverse;
+  animation-name: pageslider;
+  animation-duration: 100ms;
+}
+
+.main-content{
+  max-width: 900px;;
+  padding: 16px 70px;
+}
+
+.content-header{
+  align-items: start;
+  width: fit-content;
+  padding: 8px 12px;
+}
+
+.rightbar{
+  padding: 16px;
+  border-left: #1C1C1C1A solid 1px;
+  text-align: start;
+  width: 20%;
+  animation: reverse;
+  animation-name: myslider;
+  animation-duration: 100ms;
+}
+
+.frameheader{
+  font-size: 14px;
+}
+/* .rightbar-frame{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+} */
+.searchbar{
+  /* background-color: #1C1C1C66; */
+  height: 20px;
+  border-radius: 8px;
+  border:#1C1C1C1A solid 1.5px;
+  padding: 4px;
+  display: inline-flex;
+}
+
+.searchicon{
+  display: inline-block;
+  border: none;
+  /* position: absolute; */
+}
+
+.block-container{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.dashcard{
+  border-radius: 16px;
+  background-color: #F7F9FB;
+  text-align: center;
+  padding: 12px 26px;
+}
+.mini-cardele{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 8px;
+}
+
+@keyframes myslider{
+      0% {
+        width: 15%;
+      }
+      100% {
+        width: 0%;
+        display: none;
+      }
+}
+
+.rightbar-slider{
+  animation: forwards;
+  animation-name: myslider;
+  animation-duration: 100ms;
+  /* animation-timing-function: ease-in; */
+  overflow: hidden;
+}
+
+@keyframes pageslider{
+      100% {
+        width: 100%;
+      }
+}
+
+.mainpage-slider{
+  animation: forwards;
+  animation-name: pageslider;
+  animation-duration: 100ms;
+  width: 100%;
+}
+
+.progressbar{
+  height: 4px;
+  width: 100%;
+  background-color: #3e3c3c21;
+  border-radius: 12px;
 }
