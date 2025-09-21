@@ -1,5 +1,3 @@
-import { Children } from "react";
-import CurvyArrowUp from "./SVG/CurvyArrowUp";
 
 export default function DashboardCard(props){
 

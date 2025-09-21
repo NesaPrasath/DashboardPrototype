@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import GridTableColumn from "./GridTableColumn";
 
 export default function GridTableRow(props){

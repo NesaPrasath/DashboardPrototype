@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import GridContainer from './Components/GridContainer';
 import Menubar from './Components/Menubar';
@@ -85,8 +85,8 @@ bodyelement:[[<p>ASOS Ridley High Waist</p>,<p>$79.49</p>,<p>82</p>,<p>$6,518.18
         <div className={page.rightbar?'mainpage':'mainpage-slider'}>
           <Menubar breadcrumb={BreadcrumbData} handleSidebarClick={()=>{setPage(data=>({...data,rightbar:!data.rightbar}))}}></Menubar>
           <div className='main-content'>
-            <h3 className='content-header'>{page.name=='Dashboard'?'eCommerce':'Order List'}</h3>
-            {page.name=='Dashboard'?<div className="block-container">
+            <h3 className='content-header'>{page.name==='Dashboard'?'eCommerce':'Order List'}</h3>
+            {page.name==='Dashboard'?<div className="block-container">
               <div style={{display:'flex',gap:'16px'}}>
                 <BlockElement className="mini-cardele" width='50%'>
                   {CardData.map(data=><DashboardCard name={data.name} value={data.value} value1={data.value1} icon={data.icon} width='140px' height='90px' background={data.background} className='minicard'/>)}
